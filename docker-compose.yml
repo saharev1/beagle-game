@@ -1,5 +1,5 @@
 services:
-  Beagly:
+  beagly:
     build: .
     ports:
       - "3000:80"
