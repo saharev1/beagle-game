@@ -1,0 +1,6 @@
+services:
+  fayman-site:
+    build: .
+    ports:
+      - "3000:443"
+    restart: always

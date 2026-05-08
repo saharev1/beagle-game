@@ -56,6 +56,7 @@
   border-radius: 12px;
   border: 2px solid #E9D5FF;
   height: 52px; /* По ТЗ больше 48px */
+  color: #333333; /* Задаем темный цвет текста */
   outline: none;
   transition: all 0.3s ease;
   background-color: #FAFAFA;
@@ -103,7 +104,9 @@
 
 .avatar-image {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Яркая и крупная кнопка */

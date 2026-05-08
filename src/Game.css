@@ -1,0 +1,202 @@
+/* Обучение (Туториал) */
+.tutorial-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.tutorial-content {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.tutorial-content h2 {
+  color: #6B21A8;
+  margin-bottom: 20px;
+}
+
+.tutorial-hint {
+  color: #888;
+  font-size: 14px;
+  margin: 20px 0;
+}
+
+/* Игровое поле */
+.game-board-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F3E8FF 0%, #D8B4FE 100%);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.game-header {
+  background: white;
+  padding: 15px 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(147, 51, 234, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #F3E8FF;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: bold;
+  color: #6B21A8;
+  font-size: 18px;
+}
+
+.user-score {
+  color: #7E22CE;
+}
+
+/* Сетка треков */
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.track-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(147, 51, 234, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.track-card h3 {
+  color: #6B21A8;
+  margin-bottom: 10px;
+}
+
+.track-desc {
+  color: #555;
+  font-size: 14px;
+}
+
+.status-badge {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #D1FAE5;
+  color: #065F46;
+}
+
+.active-badge {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+/* Состояния треков */
+.track-card.active {
+  border: 3px solid #A855F7;
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.3);
+}
+
+.track-card.active:hover {
+  transform: scale(1.08);
+}
+
+.track-card.locked {
+  background: #f3f4f6;
+  color: #9ca3af;
+}
+
+.fog {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(200, 200, 200, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.lock-icon { font-size: 40px; }
+
+/* Видео, Задания и Билет */
+.video-screen, .task-screen, .final-screen {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F3E8FF 0%, #D8B4FE 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.video-placeholder {
+  width: 100%; max-width: 600px; height: 350px;
+  background: black; color: white;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 20px; margin: 20px 0;
+}
+
+.task-card {
+  background: white; padding: 40px; border-radius: 24px;
+  max-width: 600px; width: 100%;
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.15);
+}
+
+.attempts-indicator {
+  color: #EA580C; font-weight: bold; margin: 15px 0;
+}
+
+.task-actions {
+  display: flex; gap: 15px; justify-content: center; margin-top: 20px;
+}
+
+.task-btn {
+  flex: 1; font-size: 16px; height: 50px;
+}
+
+.task-btn.correct { background: linear-gradient(135deg, #34D399 0%, #059669 100%); }
+.task-btn.wrong { background: linear-gradient(135deg, #F87171 0%, #DC2626 100%); }
+
+.ticket {
+  background: linear-gradient(135deg, #FDE68A 0%, #D97706 100%);
+  padding: 40px; border-radius: 20px; color: white;
+  margin-top: 20px; box-shadow: 0 10px 25px rgba(217, 119, 6, 0.3);
+}
+
+.failed-text { color: #DC2626; font-size: 18px; margin-top: 20px; }
