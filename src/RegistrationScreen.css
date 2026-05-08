@@ -1,0 +1,146 @@
+/* Основной фон на весь экран с мягким фиолетовым градиентом */
+.registration-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F3E8FF 0%, #D8B4FE 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+/* Белая карточка с формой */
+.registration-container {
+  background: white;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.15);
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 15px;
+}
+
+.title {
+  color: #6B21A8; /* Глубокий фиолетовый */
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #7E22CE;
+  font-size: 18px;
+  margin: 20px 0 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Поля ввода (крупные, с эффектом при фокусе) */
+.input-field {
+  padding: 0 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid #E9D5FF;
+  height: 52px; /* По ТЗ больше 48px */
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #FAFAFA;
+}
+
+.input-field.half {
+  flex: 1;
+}
+
+.input-field:focus {
+  border-color: #A855F7;
+  background-color: #FFF;
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15);
+}
+
+/* Сетка аватаров */
+.avatar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.avatar-card {
+  cursor: pointer;
+  border-radius: 16px;
+  padding: 12px;
+  background-color: #F3E8FF;
+  border: 3px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.avatar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(147, 51, 234, 0.15);
+}
+
+/* Выбранный аватар */
+.avatar-card.selected {
+  border-color: #9333EA;
+  background-color: #FAF5FF;
+  box-shadow: 0 4px 12px rgba(147, 51, 234, 0.3);
+  transform: scale(1.05);
+}
+
+.avatar-image {
+  width: 100%;
+  height: auto;
+}
+
+/* Яркая и крупная кнопка */
+.submit-button {
+  height: 60px;
+  font-size: 20px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #A855F7 0%, #7E22CE 100%);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(126, 34, 206, 0.3);
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(126, 34, 206, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+}
+
+/* Экран загрузки */
+.loading-screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #F3E8FF 0%, #D8B4FE 100%);
+}
+
+.loading-text {
+  color: #6B21A8;
+  margin-top: 20px;
+  font-size: 24px;
+}
